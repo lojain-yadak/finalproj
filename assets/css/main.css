@@ -324,6 +324,7 @@ color: var(--mainColor);
 .header .container{
     position: absolute;
     top: 20%;
+    margin-left: 48px;
    
 }
 .header.header-video .header-bg-video {
@@ -430,7 +431,7 @@ video {
 
 /* Media Query for Mobile Devices (e.g., screens up to 576px) */
 @media (max-width: 576px) {
-  .header .ms-2{
+  .header .container{
     margin-left: 0;
    }
 
@@ -441,18 +442,29 @@ video {
 
     .headertitle {
         width: 100%; /* Full width for mobile */
-        font-size: 32px; /* Smaller font size for mobile */
+        font-size: 22px; /* Smaller font size for mobile */
     }
 
     .discover {
         width: 90%; /* Full width for mobile */
-        font-size: 12px; /* Smaller font size */
+        font-size: 10px; /* Smaller font size */
+    }
+    .d-flex.justify-content-lg-start {
+        flex-direction: row; /* Ensure buttons are in a row */
+        flex-wrap: wrap; /* Allow wrapping if needed */
+        gap: 10px; /* Add spacing between buttons */
     }
 
     .discovercofeebtn,
     .bookatablebtn {
-        padding: 10px 20px; /* Smaller padding for buttons */
-        font-size: 12px; /* Smaller font size */
+        padding: 7px 5px; /* Smaller padding for buttons */
+        font-size: 9px; /* Smaller font size */
+        position: relative;
+        bottom: 55px; 
+        flex: 1; /* Allow buttons to grow and share space */
+        min-width: 120px; /* Set a minimum width for buttons */
+        text-align: center; /* Center text inside buttons */
+   
     }
 
     .scrolling-content {
