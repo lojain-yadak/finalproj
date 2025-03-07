@@ -1,0 +1,652 @@
+@import url('https://fonts.googleapis.com/css2?family=Forum&family=Jost:ital,wght@0,100..900;1,100..900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --mainColor:#C9A581 ;
+    --secondColor:#121D23;
+    --mainFont:"Jost", serif;
+    --primaryFont:"Forum", serif
+}
+a{
+    color: none;
+    text-decoration: none;
+}
+button{
+    background: none;
+    border: none;
+}
+body{
+    background-color: var(--secondColor);
+    color: aliceblue;
+}
+@media only screen and (max-width: 767px) {
+    body {
+        font-size: 16px;
+    }
+}
+.navbar-toggler {
+    color: #C9A581;
+    background-color: #C9A581;
+}
+.mycontainer{
+    width: calc(100% - 200px);
+    margin: auto;
+}
+::selection {
+    background-color: white; /* Background color of the selected text */
+    color: black; /* Text color of the selected text (optional) */
+  }
+/*start first content*/
+.somecontact{
+     
+        background: linear-gradient(90deg, var(--accent-color) 0%, var(--accent-secondary-color) 100%);
+        padding: 10px 0;
+    
+}
+ul,li{
+    list-style: none;
+}
+.email {
+    font-family: var(--mainFont);
+    color: var(--secondColor);
+
+}
+.email:hover {
+    cursor: pointer;
+    color: aliceblue;
+}
+.border-secondcolor{
+    border-right: 2px solid var(--secondColor);
+   
+}
+.item {
+    color: var(--secondColor);
+    position: relative; /* Required for pseudo-element positioning */
+    display: inline-block; /* Ensure the span behaves like a block */
+  }
+.item a{
+    color: var(--secondColor);
+    transition: all .3s ease-in-out;
+}
+.item:hover a{
+    color: #fff;
+
+}
+
+/*end first content*/
+.d-none{
+    display: none;
+}
+/* Dropdown menu styles */
+.dropdown-menu{
+display: none;
+transition: all .5s ease-in-out;
+background: linear-gradient(to right,#C8A480, #ffe2c5);
+
+
+}
+.dropdown{
+       transition: all .5s ease-in-out;
+}
+.dropdown:hover .dropdown-menu{
+    display: block;
+}
+nav a{
+    color:#FFFFFF;
+    font-family: var(--mainFont);
+    font-weight:300 ;
+    font-size: 20px;
+    transition: all .3s ease-in-out;
+}
+.nav-link{
+    color:#FFFFFF;
+    font-family: var(--mainFont);
+    font-weight:500 ;
+    font-size: 20px;
+    transition: all .3s ease-in-out;
+}
+.nav-link:hover{
+    color:var(--mainColor);
+
+}
+.dropdown-item{
+    font-family: var(--primaryFont);
+    font-weight: 700;
+    font-size: large;
+    transition: all .3s ease-in-out;
+    background-color: initial;
+}
+.dropdown-item:hover{
+color: #fff;
+background-color: initial;
+margin-left: 1px;
+margin-bottom: 5px;
+}
+/* General Styles */
+.somecontact {
+    padding: 0;
+    background: linear-gradient(to right, #ccaa88, #fad2ab);
+    width: 100%;
+    height: auto; /* Changed to auto for responsiveness */
+    color: var(--secondColor);
+}
+
+.email {
+    font-family: var(--mainFont);
+    color: var(--secondColor);
+}
+
+.email:hover {
+    cursor: pointer;
+    color: aliceblue;
+}
+
+.border-secondcolor {
+    border-right: 2px solid var(--secondColor);
+}
+
+.item {
+    color: var(--secondColor);
+    position: relative;
+    display: inline-block;
+}
+
+.item a {
+    color: var(--secondColor);
+    transition: all 0.3s ease-in-out;
+}
+
+.item:hover a {
+    color: #fff;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .somecontact {
+        height: auto;
+        padding: 10px 0;
+    }
+
+    .d-flex {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .contact-info {
+        flex-direction: column;
+        gap: 10px !important;
+    }
+
+    .social {
+        justify-content: flex-start !important;
+        margin-top: 10px;
+        display: flex;
+    }
+
+    .item {
+        padding: 5px !important;
+    }
+}
+
+@media (max-width: 576px) {
+    .email, .bi-geo-alt {
+        font-size: 14px;
+    }
+
+    .social {
+        gap: 5px;
+    }
+}
+/*start nav section*/
+.navbar{
+    background-color: var(--secondColor);
+}
+.bookatable {
+    font-family: var(--mainFont);
+    border: 2px solid var(--mainColor);
+    color: var(--mainColor);
+    font-weight: 400;
+    background-color: transparent;
+    transition: background-color .4s ease-in-out;
+}
+.bookatable:hover {
+    background-color: var(--mainColor);
+    color: var(--secondColor);
+    font-weight: 400;
+}
+
+#navbar {
+    position: fixed; /* Fix the sidebar to the viewport */
+    top: 0;
+    right: 0;
+    width: 100vh; /* Adjust the width as needed */
+    height: 100vh; /* Full height */
+    background-color: #f8f9fa; /* Background color */
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1); /* Add a shadow for depth */
+    transform: translateX(100%); /* Hide the sidebar by default */
+    transition: transform 0.3s ease; /* Smooth transition */
+    z-index: 1000; /* Higher z-index to ensure it appears above the header */
+}
+
+#navbar.show {
+    transform: translateX(0); /* Show the sidebar */
+}
+.sidebartitle{
+font-family: var(--primaryFont);
+width: 50%;
+font-size: 47px;
+font-weight: 500;
+text-align: center;
+text-wrap: wrap;
+color:#c9a581;
+  }
+  /* Disable interactions when inert */
+  #navbar[inert] {
+    pointer-events: none; /* Disable pointer events */
+    user-select: none; /* Disable text selection */
+    opacity: 0.5; /* Optional: Reduce opacity to indicate inert state */
+  }
+.buttonclose{
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+  }
+ .close-sidebar-button{
+    color: #000;
+    width: 50px;
+    height: 50px;
+    margin-right:25px ;
+    border-radius:50% ;
+    background-color: #fac999;
+    font-size: 27px;
+    display: flex;
+    font-weight: 600;
+    justify-content: center;
+    align-items: center;
+ } 
+ .sidebarcontent{
+    padding: 30px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+ }
+ .description,.loc{
+    color:#000;
+    width: 50%;
+    text-align: center;
+ }
+ .tel{
+    font-family: var(--primaryFont);
+    width: 50%;
+    font-size: 47px;
+    font-weight: 500;
+    text-align: center;
+    text-wrap: wrap;
+    color:#c9a581;
+    transition: all .3s ease-in-out;
+}
+.tel:hover{
+    color: var(--secondColor);
+}
+.emailoffcanva{
+width: 50%;
+color: var(--secondColor);
+text-align: center;
+font: 400;
+margin-top: -20px;
+}
+.emailoffcanva:hover{
+color: var(--mainColor);
+}
+.date{
+    color: var(--secondColor);
+    width: 50%;
+    font-family:var(--primaryFont) ;
+    font-weight: 600;
+    text-align: center;
+}
+/*end nav section*/
+
+/*start header section*/
+.header{
+  
+        position: relative; /* Ensure the header has a position */
+        z-index: 10; /* Lower z-index than the sidebar */
+        padding: 30px 0;
+}
+.header .container{
+    position: absolute;
+    top: 20%;
+   
+}
+.header.header-video .header-bg-video {
+    position: relative;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+
+}
+.bgvideo{
+background: linear-gradient(to bottom,#171e22bc,#171e22bc);
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height:100%;
+}
+.header.header-video .header-bg-video video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+video {
+    object-fit: contain;
+    overflow-clip-margin: content-box;
+    overflow: clip;
+}
+.crafted{
+    width:50% ;
+    text-align: left;
+    color: #fff;
+    font-family: var(--mainFont);
+    font-size: 18px;
+}
+.headertitle{
+    width:60% ;
+    font-family: var(--primaryFont);
+    white-space: normal;
+    font-size:55px ;
+    text-align: left;
+    font-weight: lighter;
+
+}
+.discover{
+    width: 60%;
+    font-family: var(--mainFont);
+    font-weight: lighter;
+}
+.discovercofeebtn{
+    padding: 15px 40px;
+    border: 2px solid var(--mainColor);
+    background: linear-gradient(to right,#C9A581,#ffe2c5);
+    color: var(--secondColor);
+    transition: background 5s ease-in-out;
+}
+.discovercofeebtn:hover{
+    background: linear-gradient(to left,#C9A581,#ffe2c5);
+
+}
+.bookatablebtn{
+    padding: 15px 40px;
+    border: 2px solid var(--mainColor);
+    background:none;
+    color: var(--mainColor);
+    font-family: var(--mainFont);
+    transition: background .5s ease-in-out;
+}
+.bookatablebtn:hover{
+    background: var(--mainColor);
+    color: var(--secondColor);
+    font-family: var(--mainFont);
+}
+/* Existing styles remain unchanged */
+
+/* Media Query for Tablets (e.g., screens up to 768px) */
+@media (max-width: 768px) {
+    .header .container {
+        top: 15%; /* Adjust container positioning */
+    }
+
+    .crafted {
+        width: 70%; /* Increase width for better readability */
+        font-size: 16px; /* Slightly smaller font size */
+    }
+
+    .headertitle {
+        width: 80%; /* Increase width for better readability */
+        font-size: 40px; /* Smaller font size for tablets */
+    }
+
+    .discover {
+        width: 80%; /* Increase width for better readability */
+        font-size: 14px; /* Smaller font size */
+    }
+
+    .discovercofeebtn,
+    .bookatablebtn {
+        padding: 12px 30px; /* Smaller padding for buttons */
+        font-size: 14px; /* Smaller font size */
+    }
+}
+
+/* Media Query for Mobile Devices (e.g., screens up to 576px) */
+@media (max-width: 576px) {
+  .header .ms-2{
+    margin-left: 0;
+   }
+
+    .crafted {
+        width: 90%; /* Full width for mobile */
+        font-size: 14px; /* Smaller font size */
+    }
+
+    .headertitle {
+        width: 100%; /* Full width for mobile */
+        font-size: 32px; /* Smaller font size for mobile */
+    }
+
+    .discover {
+        width: 90%; /* Full width for mobile */
+        font-size: 12px; /* Smaller font size */
+    }
+
+    .discovercofeebtn,
+    .bookatablebtn {
+        padding: 10px 20px; /* Smaller padding for buttons */
+        font-size: 12px; /* Smaller font size */
+    }
+
+    .scrolling-content {
+        font-size: 12px; /* Smaller font size for scrolling text */
+    }
+}
+/*end header section*/
+/*start marquee section*/
+
+.scrolling-content {
+    flex-shrink: 0;
+    display: flex;
+    gap: var(--gap);
+    min-width: 100%;
+    animation: scroll 50s linear infinite;
+    font-family: var(--mainFont);
+}
+.scrolling-ticker-box {
+    padding: 35px;
+    background-color: var(--mainColor);
+    --gap: 30px;
+    position: relative;
+    display: flex;
+    overflow: hidden;
+    user-select: none;
+    gap: var(--gap);
+    align-items: center;
+    margin-bottom: -20px;
+    font-size: 40px;
+    color: var(--secondColor);
+    user-select: none;
+}
+@keyframes scroll {
+    
+
+0% {
+    transform: translateX(0);
+}
+100% {
+    transform: translateX(calc(-100% - var(--gap)));
+}
+}
+/*end marquee section*/
+/*start first section*/
+.opening{
+    margin-top: 30px;
+    padding: 30px 0;
+    background-image: url('../images/about-us/pricing-bg-image.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.opening-time-box {
+    position: absolute;
+    bottom: 50px;
+    left: 0;
+    width: 100%;
+    max-width: 320px;
+    background: linear-gradient(90deg, var(--accent-color) 0%, var(--accent-secondary-color) 50%, var(--accent-color) 100%);
+    background-size: 200% auto;
+    border-radius: 26px;
+    padding: 30px;
+    transition: all 0.4s ease-in-out;
+    z-index: 1;
+}
+.openingimage img{
+    width: 100%;
+border-top-left-radius: 50%;
+border-top-right-radius: 50%;
+}
+.aboutus{
+    font-size: small;
+    font-family:var(--mainFont) ;
+}
+.generator-container
+{
+    width: 50%;
+}
+.bringing{
+    width: 100%;
+    text-align: left;
+    font-size:60px ;
+    font-family: var(--mainFont);
+}
+.openingimage{
+    position: relative;
+}
+.timeicon{
+    width: 50px;
+    height: 50px;
+    background-color: var(--secondColor);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.timeopen{
+    width: 60%;
+    background: linear-gradient(to left,#C9A581,#feefe0);
+    padding: 20px;
+    position: absolute;
+    bottom: 100px;
+    left: -50px;
+    border-radius: 30px;
+    transition: all .7s;
+}
+.timeopen:hover{
+    background: linear-gradient(to right,#C9A581,#feefe0);
+
+}
+
+.opening-time-content{
+    color: var(--secondColor);
+    width: 100%;
+}
+.opening-time-content ul li span {
+    width: 45%;
+}
+.opening-time-content ul li:last-child {
+    margin-bottom: 0;
+}
+.opening-time-content ul li {
+    color: var(--secondary-color);
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+.fooddelivarycontent {
+    width: calc(100% - 90px);
+}
+
+.fooddelivarycontent p {
+    line-height: 1.6em;
+}
+
+.fooddelivaryicon {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #23333c; /* Solid color background */
+    position: relative;
+    overflow: hidden; /* Ensure the pseudo-element stays within the circle */
+}
+
+.fooddelivaryicon::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, transparent 0%, transparent 50%, #C9A581 70%, #f7dec4 100%); /* Gradient background */
+    opacity: 0; /* Start with the gradient hidden */
+    transition: opacity .7s; /* Transition the opacity */
+    border-radius: 50%; /* Match the parent's border-radius */
+}
+
+.food-delivary:hover .fooddelivaryicon::before {
+    opacity: 1; /* Fade in the gradient */
+}
+/* Existing styles remain unchanged */
+
+/* Media Query for Tablets (e.g., screens up to 768px) */
+@media (max-width: 768px) {
+    .generator-container {
+        width: 100%; /* Full width on smaller screens */
+    }
+
+    .bringing {
+        font-size: 48px; /* Slightly smaller font size for tablets */
+    }
+}
+
+/* Media Query for Mobile Devices (e.g., screens up to 576px) */
+@media (max-width: 576px) {
+    .bringing {
+        font-size: 36px; /* Smaller font size for mobile */
+    }
+
+    .timeopen {
+      width: 100%; /* Full width on mobile */
+        left: 0; /* Reset positioning */
+        bottom: 0px; /* Adjust positioning */
+    }
+
+    .food-delivary {
+        flex-direction: column; /* Stack food delivery items vertically */
+        align-items: center; /* Center align items */
+    }
+
+    .fooddelivarycontent {
+        width: 100%; /* Full width for content */
+        text-align: center; /* Center align text */
+    }
+
+    
+}
+/*end first section*/
